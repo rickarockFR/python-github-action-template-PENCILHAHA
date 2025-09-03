@@ -1,5 +1,6 @@
 import requests
 import os
+from time import gmtime, strftime
 
 def get_image(x,y):
     img_data = requests.get(f'https://backend.wplace.live/files/s0/tiles/{x}/{y}.png').content
@@ -18,4 +19,6 @@ while f'{i}.png' in files:
 
 with open(f'{i}.png', 'wb') as f:
     f.write(str(get_image(1189,1174)))
+with open(f'{i}.txt', 'w') as f:
+    f.write(strftime("%H:%M", gmtime()))
 

@@ -14,11 +14,13 @@ def get_image(x,y):
 
 files = os.listdir()
 i = 1
-while f'{i}.png' in files:
+while f'{i}-1.png' in files:
     i+=1
 
-with open(f'{i}.png', 'wb') as f:
+with open(f'{i}-1.png', 'wb') as f:
     f.write(get_image(1189,1174))
+with open(f'{i}-2.png', 'wb') as f:
+    f.write(get_image(1190,1174))
 with open(f'{i}.txt', 'w') as f:
     f.write(strftime("%H:%M", gmtime()))
 

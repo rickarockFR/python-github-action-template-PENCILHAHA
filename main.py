@@ -12,9 +12,9 @@ def get_image(x,y):
     if not b'404 Not Found' in img_data:
         return img_data
 
-files = os.listdir()
+files = os.listdir(backups)
 i = 1
-while f'backups/{i}-1.png' in files:
+while f'{i}-1.png' in files:
     i+=1
 
 with open(f'backups/{i}-1.png', 'wb') as f:

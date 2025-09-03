@@ -16,6 +16,6 @@ i = 1
 while f'{i}.png' in files:
     i+=1
 
-with open(f'{i}.png', 'w') as f:
-    f.write(get_image(1189,1174))
+with open(f'{i}.png', 'wb') as f:
+    f.write(str(get_image(1189,1174)))
 
